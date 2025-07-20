@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Reaction Time Test</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="game-header">
+        <h1 class="game-title">Reaction Time Test</h1>
+        <p class="game-instructions">Click on the red box as quickly as possible when it appears. The box will move after each click and the game will measure your reaction time.</p>
+    </div>
+
+    <div class="game-container">
+        <div class="target-box" id="targetBox">Click Me!</div>
+    </div>
+
+    <div class="results" id="results">
+        <div class="current-time">Waiting for first click...</div>
+        <div class="best-time" id="bestTime"></div>
+    </div>
+
+    <div class="stats">
+        <div class="stat-box">
+            <div class="stat-value" id="attempts">0</div>
+            <div class="stat-label">Attempts</div>
+        </div>
+        <div class="stat-box">
+            <div class="stat-value" id="averageTime">0</div>
+            <div class="stat-label">Avg Time (ms)</div>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
+
