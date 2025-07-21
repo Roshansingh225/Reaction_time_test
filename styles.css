@@ -1,0 +1,142 @@
+/* CSS Reset and Base Styles */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+body {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    min-height: 100vh;
+    background-color: #f5f5f5;
+    color: #333;
+    overflow: hidden;
+}
+
+/* Game Header */
+.game-header {
+    text-align: center;
+    margin-bottom: 30px;
+}
+
+.game-title {
+    font-size: 2.5rem;
+    margin-bottom: 10px;
+    color: #2c3e50;
+}
+
+.game-instructions {
+    font-size: 1.2rem;
+    color: #7f8c8d;
+    max-width: 600px;
+    line-height: 1.5;
+}
+
+/* Game Container */
+.game-container {
+    position: relative;
+    width: 80vw;
+    height: 60vh;
+    max-width: 800px;
+    max-height: 500px;
+    background-color: #ecf0f1;
+    overflow: hidden;
+}
+
+/* Target Box */
+.target-box {
+    position: absolute;
+    width: 80px;
+    height: 80px;
+    background-color: #e74c3c;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: white;
+    font-weight: bold;
+    user-select: none;
+}
+
+.target-box:hover {
+    opacity: 0.9;
+}
+
+.target-box.success {
+    background-color: #2ecc71;
+}
+
+/* Results Display */
+.results {
+    text-align: center;
+    margin-top: 30px;
+    font-size: 1.5rem;
+    min-height: 60px;
+    color: #2c3e50;
+}
+
+.best-time {
+    font-size: 1.2rem;
+    color: #7f8c8d;
+    margin-top: 10px;
+}
+
+/* Stats Panel */
+.stats {
+    display: flex;
+    justify-content: center;
+    gap: 30px;
+    margin-top: 20px;
+}
+
+.stat-box {
+    background-color: white;
+    padding: 15px 25px;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    min-width: 120px;
+}
+
+.stat-value {
+    font-size: 1.8rem;
+    font-weight: bold;
+    color: #2c3e50;
+}
+
+.stat-label {
+    font-size: 0.9rem;
+    color: #7f8c8d;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+}
+
+/* Responsive Adjustments */
+@media (max-width: 768px) {
+    .game-container {
+        width: 90vw;
+        height: 50vh;
+    }
+
+    .target-box {
+        width: 60px;
+        height: 60px;
+        font-size: 0.8rem;
+    }
+
+    .stats {
+        flex-direction: column;
+        gap: 15px;
+        align-items: center;
+    }
+
+    .stat-box {
+        width: 80%;
+        padding: 10px;
+    }
+}
